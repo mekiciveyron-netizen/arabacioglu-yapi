@@ -38,7 +38,7 @@ export default function Hero() {
         className="relative z-10 w-full px-4 md:px-12 pb-14 md:pb-28 max-w-7xl mx-auto"
       >
         <motion.span
-          className="block font-sans text-[10px] tracking-[0.4em] uppercase text-stone-300 mb-5"
+          className="block font-sans font-semibold text-xs md:text-sm tracking-[0.35em] uppercase text-stone-300 mb-5"
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
@@ -67,7 +67,7 @@ export default function Hero() {
         >
           <a
             href="#projeler"
-            className="group inline-flex items-center gap-3 font-sans font-medium text-[11px] tracking-[0.25em] uppercase text-white"
+            className="group inline-flex items-center gap-3 font-sans font-bold text-sm tracking-[0.2em] uppercase text-white"
           >
             <span className="w-8 h-[1px] bg-white/50 group-hover:w-16 group-hover:bg-white transition-all duration-500" />
             Projeleri Keşfet

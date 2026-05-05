@@ -42,9 +42,9 @@ export default function Navbar() {
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       >
-        <div className="max-w-7xl mx-auto px-4 md:px-12 flex items-center justify-between h-16 md:h-20">
+        <div className="max-w-7xl mx-auto px-4 md:px-12 flex items-center justify-between h-20 md:h-28">
           {/* Logo */}
-          <Link href="/" className="relative block h-9 md:h-11 w-36 md:w-44 flex-shrink-0">
+          <Link href="/" className="relative block h-12 md:h-[72px] w-44 md:w-72 flex-shrink-0">
             {/* Color logo — hero (dark) state */}
             <Image
               src="https://arabaciogluyapi.com/img/arabacioglulogo.png"
@@ -54,7 +54,7 @@ export default function Navbar() {
               className={`object-contain object-left transition-opacity duration-300 ${
                 scrolled ? "opacity-0" : "opacity-100"
               }`}
-              sizes="176px"
+              sizes="288px"
             />
             {/* Dark logo — scrolled (light) state */}
             <Image
@@ -64,7 +64,7 @@ export default function Navbar() {
               className={`object-contain object-left transition-opacity duration-300 ${
                 scrolled ? "opacity-100" : "opacity-0"
               }`}
-              sizes="176px"
+              sizes="288px"
             />
           </Link>
 
@@ -74,7 +74,7 @@ export default function Navbar() {
               <a
                 key={l.href}
                 href={l.href}
-                className={`font-sans text-[11px] font-medium tracking-[0.2em] uppercase transition-colors duration-300 ${
+                className={`font-sans text-sm md:text-base font-bold tracking-[0.12em] uppercase transition-colors duration-300 ${
                   scrolled
                     ? "text-stone-600 hover:text-stone-900"
                     : "text-stone-200 hover:text-white"
@@ -87,22 +87,22 @@ export default function Navbar() {
 
           {/* Burger */}
           <button
-            className="md:hidden flex flex-col justify-center gap-[5px] w-10 h-10 -mr-2"
+            className="md:hidden flex flex-col justify-center gap-[6px] w-11 h-11 -mr-1"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? "Menüyü kapat" : "Menüyü aç"}
           >
             <span
-              className={`block h-[1px] w-6 transition-all duration-300 origin-center ${barColor} ${
+              className={`block h-[1.5px] w-7 transition-all duration-300 origin-center ${barColor} ${
                 menuOpen ? "translate-y-[6px] rotate-45" : ""
               }`}
             />
             <span
-              className={`block h-[1px] w-6 transition-opacity duration-300 ${barColor} ${
+              className={`block h-[1.5px] w-7 transition-opacity duration-300 ${barColor} ${
                 menuOpen ? "opacity-0" : ""
               }`}
             />
             <span
-              className={`block h-[1px] w-6 transition-all duration-300 origin-center ${barColor} ${
+              className={`block h-[1.5px] w-7 transition-all duration-300 origin-center ${barColor} ${
                 menuOpen ? "-translate-y-[6px] -rotate-45" : ""
               }`}
             />
@@ -145,13 +145,13 @@ export default function Navbar() {
             >
               <a
                 href="tel:4440913"
-                className="block font-sans text-[12px] tracking-[0.2em] text-stone-400 mb-2"
+                className="block font-sans text-sm font-semibold tracking-[0.15em] text-stone-500 mb-2"
               >
                 444 09 13
               </a>
               <a
                 href="mailto:info@arabaciogluyapi.com"
-                className="block font-sans text-[11px] tracking-[0.15em] text-stone-400"
+                className="block font-sans text-sm font-medium tracking-[0.1em] text-stone-400"
               >
                 info@arabaciogluyapi.com
               </a>
