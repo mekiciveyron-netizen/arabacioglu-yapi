@@ -49,7 +49,7 @@ export default function Navbar() {
               scrolled ? "text-stone-900" : "text-white"
             }`}
           >
-            Arabacioglu
+            Arabacıoğlu
             <span
               className={`block text-[9px] tracking-[0.3em] font-sans font-light -mt-1 transition-colors duration-300 ${
                 scrolled ? "text-stone-500" : "text-stone-300"
@@ -135,10 +135,10 @@ export default function Navbar() {
               transition={{ delay: 0.4 }}
             >
               <a
-                href="tel:+902121234567"
+                href="tel:4440913"
                 className="block font-sans text-[12px] tracking-[0.2em] text-stone-400 mb-2"
               >
-                +90 212 123 45 67
+                444 09 13
               </a>
               <a
                 href="mailto:info@arabaciogluyapi.com"

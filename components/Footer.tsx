@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="border-t border-stone-200 py-10 px-6 md:px-12">
       <div className="max-w-7xl mx-auto flex flex-col items-center gap-6 md:flex-row md:justify-between">
         <span className="font-serif text-sm font-light tracking-[0.15em] uppercase text-stone-500">
-          Arabacioglu Yapı
+          Arabacıoğlu Yapı
         </span>
 
         <div className="flex items-center gap-6 md:gap-8">
@@ -21,7 +21,7 @@ export default function Footer() {
         </div>
 
         <p className="font-sans text-[10px] text-stone-400 font-light tracking-wide text-center md:text-right">
-          © {year} Arabacioglu Yapı.
+          © {year} Arabacıoğlu Yapı.
         </p>
       </div>
     </footer>

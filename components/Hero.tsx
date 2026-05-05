@@ -22,8 +22,8 @@ export default function Hero() {
       {/* Background image + parallax */}
       <motion.div style={{ y }} className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=2400&q=90&auto=format&fit=crop"
-          alt="Modern mimari villa"
+          src="https://arabaciogluyapi.com/img/home-slide-3.jpg"
+          alt="Arabacıoğlu Yapı — Efeler, Aydın"
           fill
           priority
           className="object-cover object-center"

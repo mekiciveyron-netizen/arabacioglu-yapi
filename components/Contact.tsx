@@ -46,7 +46,7 @@ export default function Contact() {
                     Adres
                   </span>
                   <p className="font-sans text-[13px] text-stone-600 font-light leading-relaxed">
-                    Nispetiye Caddesi No: 12<br />Beşiktaş, İstanbul
+                    Girne Mahallesi<br />Efeler / Aydın, 09100
                   </p>
                 </div>
                 <div>
@@ -54,10 +54,10 @@ export default function Contact() {
                     Telefon
                   </span>
                   <a
-                    href="tel:+902121234567"
+                    href="tel:4440913"
                     className="font-sans text-[13px] text-stone-600 font-light hover:text-stone-900 transition-colors"
                   >
-                    +90 212 123 45 67
+                    444 09 13
                   </a>
                 </div>
                 <div>
@@ -187,7 +187,7 @@ export default function Contact() {
           <div className="relative w-full overflow-hidden" style={{ height: "400px" }}>
             <iframe
               title="Arabacioglu Yapı Konum"
-              src="https://maps.google.com/maps?q=Nispetiye+Caddesi+No+12+Be%C5%9Fikta%C5%9F+%C4%B0stanbul&t=&z=17&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=Arabac%C4%B1o%C4%9Flu+Yap%C4%B1+Ta%C5%9Far%C4%B1m+%C4%B0n%C5%9Faat+Efeler+Ayd%C4%B1n&t=&z=16&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="400"
               style={{ border: 0, filter: "grayscale(1) contrast(1.05)" }}

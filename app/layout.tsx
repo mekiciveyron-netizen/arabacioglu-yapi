@@ -16,10 +16,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Arabacioglu Yapı | Mimarlık & İnşaat",
+  title: "Arabacıoğlu Yapı | Tasarım & İnşaat — Aydın",
   description:
-    "Tasarım ve yapım süreçlerini ustalıkla birleştiren mimarlık ve inşaat firması. Yaşam alanlarınızı hayata geçiriyoruz.",
-  keywords: "mimarlık, inşaat, proje, yapı, arabacioglu",
+    "Aydın Efeler'de yenilikçi konut ve ticari projeler geliştiren Arabacıoğlu Yapı Tasarım İnşaat Ltd.Şti. Geleceği İnşa Ediyoruz.",
+  keywords: "arabacıoğlu yapı, inşaat, konut, aydın, efeler, la perla, fors zeybek, villalar",
 };
 
 export const viewport: Viewport = {

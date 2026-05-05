@@ -4,9 +4,9 @@ import Image from "next/image";
 import FadeIn from "./FadeIn";
 
 const stats = [
-  { value: "28+", label: "Yıllık Deneyim" },
-  { value: "140+", label: "Tamamlanan Proje" },
-  { value: "12", label: "Ödül" },
+  { value: "5+", label: "Yıllık Deneyim" },
+  { value: "10+", label: "Tamamlanan Proje" },
+  { value: "400+", label: "Konut" },
 ];
 
 export default function About() {
@@ -34,8 +34,8 @@ export default function About() {
             <FadeIn delay={0.1}>
               <div className="mt-8 relative h-52 sm:h-64 md:h-80 w-full overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=85&auto=format&fit=crop"
-                  alt="Mimarlık detay"
+                  src="https://arabaciogluyapi.com/img/home-grid-image-9.jpg"
+                  alt="Arabacıoğlu Yapı — Efeler, Aydın"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -64,17 +64,19 @@ export default function About() {
             <FadeIn>
               <div className="space-y-5 font-sans font-light text-stone-400 leading-relaxed text-[13px] md:text-[14px]">
                 <p>
-                  1997&apos;den bu yana Türkiye&apos;nin dört bir yanında konut, ticari ve karma
-                  kullanımlı projeler tasarlıyoruz. Her yapıda mekânın özünü keşfetmeyi, işlevselliği
-                  ve estetiği tek bir dilde buluşturmayı hedefliyoruz.
+                  Aydın Efeler&apos;de kurulu Arabacıoğlu Yapı Tasarım İnşaat Ltd.Şti, lüks konut ve
+                  karma kullanımlı projeler geliştirerek yaşam standartlarını yükseltmeyi hedeflemektedir.
+                  Mimari yenilikler ve teknolojiyi birleştirerek özgün yaşam alanları tasarlıyoruz.
                 </p>
                 <p>
-                  Tasarım sürecimiz arazi ile diyalogdan başlar. Topoğrafya, iklim, ışık ve kentsel
-                  doku — bunların her biri binanın formunu ve ruhunu şekillendirir.
+                  La Perla ve Fors Zeybek gibi öncü projelerimizle Efeler&apos;in kentsel
+                  dönüşümüne katkı sağlıyoruz. Bağımsız yüzme havuzlu rezidanslardan prestijli
+                  çatı dairelerine kadar her projede mükemmeliyeti esas alıyoruz.
                 </p>
                 <p>
-                  Müşterilerimizle kurduğumuz derin iş birliği, her projeyi benzersiz kılar. Taşın,
-                  camın ve betonun ötesinde bir hikâye anlatıyoruz.
+                  Müşterilerimize en yüksek kalitede hizmet sunmak için mimarlık, mühendislik ve
+                  ustalığı tek çatı altında buluşturuyoruz. Her projemiz, Aydın&apos;a değer katan
+                  kalıcı bir eser olarak tasarlanır.
                 </p>
               </div>
             </FadeIn>
@@ -83,8 +85,8 @@ export default function About() {
             <FadeIn delay={0.1}>
               <div className="relative h-52 sm:h-64 w-full overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=900&q=85&auto=format&fit=crop"
-                  alt="Mimari iç mekan detayı"
+                  src="https://arabaciogluyapi.com/img/icmekan01.jpg"
+                  alt="La Perla iç mekan"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 768px) 100vw, 50vw"
