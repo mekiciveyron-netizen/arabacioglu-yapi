@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -41,22 +42,30 @@ export default function Navbar() {
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-16 md:h-20">
+        <div className="max-w-7xl mx-auto px-4 md:px-12 flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link
-            href="/"
-            className={`font-serif text-lg md:text-xl font-light tracking-[0.15em] uppercase transition-colors duration-300 ${
-              scrolled ? "text-stone-900" : "text-white"
-            }`}
-          >
-            Arabacıoğlu
-            <span
-              className={`block text-[9px] tracking-[0.3em] font-sans font-light -mt-1 transition-colors duration-300 ${
-                scrolled ? "text-stone-500" : "text-stone-300"
+          <Link href="/" className="relative block h-9 md:h-11 w-36 md:w-44 flex-shrink-0">
+            {/* Color logo — hero (dark) state */}
+            <Image
+              src="https://arabaciogluyapi.com/img/arabacioglulogo.png"
+              alt="Arabacıoğlu Yapı"
+              fill
+              priority
+              className={`object-contain object-left transition-opacity duration-300 ${
+                scrolled ? "opacity-0" : "opacity-100"
               }`}
-            >
-              YAPI
-            </span>
+              sizes="176px"
+            />
+            {/* Dark logo — scrolled (light) state */}
+            <Image
+              src="https://arabaciogluyapi.com/img/logo-siyah.png"
+              alt="Arabacıoğlu Yapı"
+              fill
+              className={`object-contain object-left transition-opacity duration-300 ${
+                scrolled ? "opacity-100" : "opacity-0"
+              }`}
+              sizes="176px"
+            />
           </Link>
 
           {/* Desktop nav */}

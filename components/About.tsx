@@ -11,9 +11,9 @@ const stats = [
 
 export default function About() {
   return (
-    <section id="hakkimizda" className="py-16 md:py-40 bg-stone-900 text-white">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="flex flex-col gap-12 md:grid md:grid-cols-2 md:gap-24 md:items-start">
+    <section id="hakkimizda" className="py-14 md:py-40 bg-stone-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 md:px-12">
+        <div className="flex flex-col gap-10 md:grid md:grid-cols-2 md:gap-24 md:items-start">
 
           {/* ── Left column ── */}
           <div>

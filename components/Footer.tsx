@@ -2,7 +2,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-stone-200 py-10 px-6 md:px-12">
+    <footer className="border-t border-stone-200 py-10 px-4 md:px-12">
       <div className="max-w-7xl mx-auto flex flex-col items-center gap-6 md:flex-row md:justify-between">
         <span className="font-serif text-sm font-light tracking-[0.15em] uppercase text-stone-500">
           Arabacıoğlu Yapı

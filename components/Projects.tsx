@@ -107,7 +107,7 @@ function ProjectCard({
 
 export default function Projects() {
   return (
-    <section id="projeler" className="py-16 md:py-40 px-6 md:px-12">
+    <section id="projeler" className="py-14 md:py-40 px-4 md:px-12">
       <div className="max-w-7xl mx-auto">
         {/* Section header */}
         <div className="flex flex-col gap-3 mb-10 md:flex-row md:items-end md:justify-between md:mb-20">
@@ -115,7 +115,7 @@ export default function Projects() {
             <span className="block font-sans text-[11px] tracking-[0.4em] uppercase text-stone-400 mb-3">
               Seçili Çalışmalar
             </span>
-            <h2 className="font-serif font-light text-stone-900 text-4xl md:text-5xl lg:text-6xl leading-tight">
+            <h2 className="font-serif font-light text-stone-900 text-3xl md:text-5xl lg:text-6xl leading-tight">
               Projeler
             </h2>
           </FadeIn>
