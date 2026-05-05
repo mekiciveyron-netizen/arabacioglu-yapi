@@ -21,7 +21,7 @@ export default function About() {
               <span className="block font-sans text-[11px] tracking-[0.4em] uppercase text-stone-400 mb-5">
                 Biz Kimiz
               </span>
-              <h2 className="font-serif font-light text-white text-3xl sm:text-4xl md:text-5xl leading-tight">
+              <h2 className="font-serif font-bold text-white text-3xl sm:text-4xl md:text-5xl leading-tight">
                 Tasarım,
                 <br />
                 <em className="text-stone-400">Mühendislik</em>
@@ -48,7 +48,7 @@ export default function About() {
             <div className="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-stone-800">
               {stats.map((s, i) => (
                 <FadeIn key={s.label} delay={i * 0.1}>
-                  <span className="block font-serif font-light text-3xl md:text-4xl text-white">
+                  <span className="block font-serif font-bold text-3xl md:text-4xl text-white">
                     {s.value}
                   </span>
                   <span className="block font-sans text-[9px] tracking-[0.2em] uppercase text-stone-500 mt-1">
@@ -98,7 +98,7 @@ export default function About() {
             <FadeIn delay={0.15}>
               <a
                 href="#iletisim"
-                className="inline-flex items-center font-sans text-[11px] tracking-[0.3em] uppercase text-white border border-stone-700 px-7 py-4 hover:bg-white hover:text-stone-900 transition-all duration-500"
+                className="inline-flex items-center font-sans font-semibold text-[11px] tracking-[0.3em] uppercase text-white border border-stone-700 px-7 py-4 hover:bg-white hover:text-stone-900 transition-all duration-500"
               >
                 Projenizi Konuşalım
               </a>

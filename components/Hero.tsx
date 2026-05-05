@@ -47,14 +47,14 @@ export default function Hero() {
         </motion.span>
 
         <motion.h1
-          className="font-serif font-light text-white leading-[1.08] text-3xl sm:text-5xl md:text-7xl lg:text-8xl"
+          className="font-serif font-bold text-white leading-[1.08] text-3xl sm:text-5xl md:text-7xl lg:text-8xl"
           initial={{ opacity: 0, y: 36 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
         >
           Mekânı
           <br />
-          <em className="not-italic text-stone-300">Sanata</em>
+          <em className="italic text-stone-300">Sanata</em>
           <br />
           Dönüştürüyoruz
         </motion.h1>
@@ -67,7 +67,7 @@ export default function Hero() {
         >
           <a
             href="#projeler"
-            className="group inline-flex items-center gap-3 font-sans text-[11px] tracking-[0.25em] uppercase text-white"
+            className="group inline-flex items-center gap-3 font-sans font-medium text-[11px] tracking-[0.25em] uppercase text-white"
           >
             <span className="w-8 h-[1px] bg-white/50 group-hover:w-16 group-hover:bg-white transition-all duration-500" />
             Projeleri Keşfet

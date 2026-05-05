@@ -74,7 +74,7 @@ export default function Navbar() {
               <a
                 key={l.href}
                 href={l.href}
-                className={`font-sans text-[11px] font-light tracking-[0.2em] uppercase transition-colors duration-300 ${
+                className={`font-sans text-[11px] font-medium tracking-[0.2em] uppercase transition-colors duration-300 ${
                   scrolled
                     ? "text-stone-600 hover:text-stone-900"
                     : "text-stone-200 hover:text-white"
@@ -126,7 +126,7 @@ export default function Navbar() {
                   key={l.href}
                   href={l.href}
                   onClick={() => setMenuOpen(false)}
-                  className="font-serif text-4xl font-light text-stone-900 py-2 w-full text-center border-b border-stone-100 last:border-0"
+                  className="font-serif text-4xl font-bold text-stone-900 py-2 w-full text-center border-b border-stone-100 last:border-0"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.08 + 0.1, ease: [0.22, 1, 0.36, 1] }}

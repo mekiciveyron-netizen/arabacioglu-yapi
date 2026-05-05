@@ -30,7 +30,7 @@ export default function Brands() {
           <span className="block font-sans text-[11px] tracking-[0.4em] uppercase text-stone-400 mb-4">
             Flagship Projeler
           </span>
-          <h2 className="font-serif font-light text-stone-900 text-2xl md:text-4xl leading-tight">
+          <h2 className="font-serif font-bold text-stone-900 text-2xl md:text-4xl leading-tight">
             Öne Çıkan Markalar
           </h2>
         </FadeIn>

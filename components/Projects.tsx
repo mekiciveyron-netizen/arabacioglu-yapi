@@ -89,7 +89,7 @@ function ProjectCard({
 
         <div className="pt-4 pb-2 flex items-start justify-between gap-2">
           <div>
-            <h3 className="font-serif text-lg md:text-xl font-light text-stone-900 leading-snug">
+            <h3 className="font-serif text-lg md:text-xl font-semibold text-stone-900 leading-snug">
               {project.title}
             </h3>
             <span className="font-sans text-[10px] tracking-[0.2em] text-stone-400 uppercase mt-1 block">
@@ -115,7 +115,7 @@ export default function Projects() {
             <span className="block font-sans text-[11px] tracking-[0.4em] uppercase text-stone-400 mb-3">
               Seçili Çalışmalar
             </span>
-            <h2 className="font-serif font-light text-stone-900 text-3xl md:text-5xl lg:text-6xl leading-tight">
+            <h2 className="font-serif font-bold text-stone-900 text-3xl md:text-5xl lg:text-6xl leading-tight">
               Projeler
             </h2>
           </FadeIn>
@@ -151,7 +151,7 @@ export default function Projects() {
         </div>
 
         <FadeIn className="mt-12 flex justify-center">
-          <button className="group flex items-center gap-4 font-sans text-[11px] tracking-[0.3em] uppercase text-stone-500 hover:text-stone-900 transition-colors duration-300 py-3 min-h-[44px]">
+          <button className="group flex items-center gap-4 font-sans font-semibold text-[11px] tracking-[0.3em] uppercase text-stone-500 hover:text-stone-900 transition-colors duration-300 py-3 min-h-[44px]">
             Tüm Projeler
             <span className="w-8 h-[1px] bg-stone-400 group-hover:w-14 group-hover:bg-stone-900 transition-all duration-500" />
           </button>

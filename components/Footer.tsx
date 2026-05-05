@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-stone-200 py-10 px-4 md:px-12">
       <div className="max-w-7xl mx-auto flex flex-col items-center gap-6 md:flex-row md:justify-between">
-        <span className="font-serif text-sm font-light tracking-[0.15em] uppercase text-stone-500">
+        <span className="font-serif text-sm font-semibold tracking-[0.15em] uppercase text-stone-500">
           Arabacıoğlu Yapı
         </span>
 
@@ -13,7 +13,7 @@ export default function Footer() {
             <a
               key={href}
               href={href}
-              className="font-sans text-[10px] tracking-[0.2em] uppercase text-stone-400 hover:text-stone-900 transition-colors"
+              className="font-sans font-medium text-[10px] tracking-[0.2em] uppercase text-stone-400 hover:text-stone-900 transition-colors"
             >
               {["Projeler", "Hakkımızda", "İletişim"][i]}
             </a>

@@ -30,7 +30,7 @@ export default function Contact() {
               <span className="block font-sans text-[11px] tracking-[0.4em] uppercase text-stone-400 mb-5">
                 İletişim
               </span>
-              <h2 className="font-serif font-light text-stone-900 text-3xl sm:text-4xl md:text-5xl leading-tight">
+              <h2 className="font-serif font-bold text-stone-900 text-3xl sm:text-4xl md:text-5xl leading-tight">
                 Projenizi
                 <br />
                 Hayata
@@ -81,7 +81,7 @@ export default function Contact() {
               <FadeIn>
                 <div className="py-10">
                   <div className="w-10 h-[1px] bg-stone-900 mb-7" />
-                  <h3 className="font-serif text-3xl font-light text-stone-900 mb-4">
+                  <h3 className="font-serif text-3xl font-bold text-stone-900 mb-4">
                     Teşekkürler.
                   </h3>
                   <p className="font-sans text-[13px] text-stone-500 font-light leading-relaxed">
@@ -156,7 +156,7 @@ export default function Contact() {
                     <button
                       type="submit"
                       disabled={status === "sending"}
-                      className="w-full sm:w-auto min-h-[52px] flex items-center justify-center gap-3 bg-stone-900 text-white font-sans text-[11px] tracking-[0.3em] uppercase px-10 py-4 hover:bg-stone-700 transition-colors duration-500 disabled:opacity-50"
+                      className="w-full sm:w-auto min-h-[52px] flex items-center justify-center gap-3 bg-stone-900 text-white font-sans font-semibold text-[11px] tracking-[0.3em] uppercase px-10 py-4 hover:bg-stone-700 transition-colors duration-500 disabled:opacity-50"
                     >
                       {status === "sending" ? (
                         <>
