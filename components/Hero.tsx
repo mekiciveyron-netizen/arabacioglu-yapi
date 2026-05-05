@@ -11,7 +11,10 @@ export default function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   return (
-    <section ref={ref} className="relative h-screen min-h-[700px] flex items-end overflow-hidden">
+    <section
+      ref={ref}
+      className="relative h-screen min-h-[600px] flex items-end overflow-hidden"
+    >
       {/* Background image with parallax */}
       <motion.div style={{ y }} className="absolute inset-0">
         <Image
@@ -22,17 +25,16 @@ export default function Hero() {
           className="object-cover object-center"
           sizes="100vw"
         />
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-900/30 to-stone-900/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-900/35 to-stone-900/10" />
       </motion.div>
 
       {/* Content */}
       <motion.div
         style={{ opacity }}
-        className="relative z-20 w-full max-w-7xl mx-auto px-6 md:px-12 pb-20 md:pb-28"
+        className="relative z-20 w-full max-w-7xl mx-auto px-6 md:px-12 pb-14 md:pb-28"
       >
         <motion.span
-          className="block font-sans text-[11px] tracking-[0.4em] uppercase text-stone-300 mb-8"
+          className="block font-sans text-[10px] md:text-[11px] tracking-[0.4em] uppercase text-stone-300 mb-5 md:mb-8"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
@@ -41,8 +43,7 @@ export default function Hero() {
         </motion.span>
 
         <motion.h1
-          className="font-serif font-light text-white leading-[1.05]"
-          style={{ fontSize: "clamp(3rem, 8vw, 7rem)" }}
+          className="font-serif font-light text-white leading-[1.05] text-[2.4rem] sm:text-6xl md:text-7xl lg:text-8xl"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
@@ -55,7 +56,7 @@ export default function Hero() {
         </motion.h1>
 
         <motion.div
-          className="flex items-center gap-8 mt-12"
+          className="flex items-center gap-8 mt-8 md:mt-12"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
@@ -64,15 +65,15 @@ export default function Hero() {
             href="#projeler"
             className="group flex items-center gap-3 font-sans text-[11px] tracking-[0.25em] uppercase text-white"
           >
-            <span className="w-12 h-[1px] bg-white/40 group-hover:w-20 group-hover:bg-white transition-all duration-500" />
+            <span className="w-8 md:w-12 h-[1px] bg-white/40 group-hover:w-20 group-hover:bg-white transition-all duration-500" />
             Projeleri Keşfet
           </a>
         </motion.div>
       </motion.div>
 
-      {/* Scroll indicator */}
+      {/* Scroll indicator — hidden on mobile */}
       <motion.div
-        className="absolute bottom-10 right-12 z-20 flex flex-col items-center gap-2"
+        className="absolute bottom-10 right-12 z-20 hidden md:flex flex-col items-center gap-2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}

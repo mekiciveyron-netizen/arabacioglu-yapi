@@ -56,6 +56,13 @@ const projects = [
   },
 ];
 
+// Responsive height classes per size, applied with Tailwind
+const heightClass = {
+  large:  "h-64 sm:h-80 md:h-[520px]",
+  medium: "h-56 sm:h-72 md:h-[400px]",
+  small:  "h-48 sm:h-64 md:h-[300px]",
+};
+
 function ProjectCard({
   project,
   delay = 0,
@@ -63,41 +70,29 @@ function ProjectCard({
   project: (typeof projects)[0];
   delay?: number;
 }) {
-  const height =
-    project.size === "large" ? 520 : project.size === "medium" ? 400 : 300;
-
   return (
     <FadeIn delay={delay}>
       <div className="group relative overflow-hidden cursor-pointer">
-        {/* Image */}
-        <div
-          className="relative overflow-hidden"
-          style={{ height }}
-        >
+        <div className={`relative overflow-hidden ${heightClass[project.size as keyof typeof heightClass]}`}>
           <Image
             src={project.photo}
             alt={project.alt}
             fill
             className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 50vw"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 50vw"
           />
-
-          {/* Dark overlay on hover */}
           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors duration-500 z-10" />
-
-          {/* Number badge */}
-          <span className="absolute top-5 left-5 z-20 font-sans text-[10px] tracking-[0.3em] text-white/60 bg-black/20 px-2 py-1">
+          <span className="absolute top-4 left-4 z-20 font-sans text-[10px] tracking-[0.3em] text-white/60 bg-black/20 px-2 py-1">
             {project.id}
           </span>
         </div>
 
-        {/* Info */}
-        <div className="pt-5 pb-2 flex items-start justify-between">
+        <div className="pt-4 pb-2 flex items-start justify-between gap-2">
           <div>
-            <h3 className="font-serif text-xl font-light text-stone-900 leading-tight">
+            <h3 className="font-serif text-lg md:text-xl font-light text-stone-900 leading-tight">
               {project.title}
             </h3>
-            <span className="font-sans text-[11px] tracking-[0.2em] text-stone-400 uppercase mt-1 block">
+            <span className="font-sans text-[10px] tracking-[0.2em] text-stone-400 uppercase mt-1 block">
               {project.category} · {project.location}
             </span>
           </div>
@@ -110,30 +105,26 @@ function ProjectCard({
 
 export default function Projects() {
   return (
-    <section id="projeler" className="py-32 md:py-40 px-6 md:px-12 max-w-7xl mx-auto">
+    <section id="projeler" className="py-16 md:py-40 px-6 md:px-12 max-w-7xl mx-auto">
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-20 gap-6">
+      <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10 md:mb-20 gap-4">
         <FadeIn>
-          <span className="block font-sans text-[11px] tracking-[0.4em] uppercase text-stone-400 mb-4">
+          <span className="block font-sans text-[11px] tracking-[0.4em] uppercase text-stone-400 mb-3">
             Seçili Çalışmalar
           </span>
-          <h2
-            className="font-serif font-light text-stone-900 leading-tight"
-            style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)" }}
-          >
+          <h2 className="font-serif font-light text-stone-900 leading-tight text-4xl md:text-5xl lg:text-6xl">
             Projeler
           </h2>
         </FadeIn>
         <FadeIn delay={0.15}>
-          <p className="font-sans text-[14px] leading-relaxed text-stone-500 max-w-xs font-light">
+          <p className="font-sans text-[13px] md:text-[14px] leading-relaxed text-stone-500 max-w-xs font-light">
             Her proje, mekânın ruhunu keşfetme ve özgün bir dil oluşturma sürecidir.
           </p>
         </FadeIn>
       </div>
 
-      {/* Asymmetrical Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
-        {/* Row 1: large left, small right offset down */}
+      {/* Mobile: single column stack — Tablet+: asymmetric 12-col grid */}
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-8">
         <div className="md:col-span-7">
           <ProjectCard project={projects[0]} delay={0} />
         </div>
@@ -141,7 +132,6 @@ export default function Projects() {
           <ProjectCard project={projects[1]} delay={0.1} />
         </div>
 
-        {/* Row 2: small left indent, medium right */}
         <div className="md:col-span-4 md:col-start-2">
           <ProjectCard project={projects[3]} delay={0.1} />
         </div>
@@ -149,15 +139,13 @@ export default function Projects() {
           <ProjectCard project={projects[2]} delay={0.2} />
         </div>
 
-        {/* Row 3: centered */}
         <div className="md:col-span-8 md:col-start-3">
           <ProjectCard project={projects[4]} delay={0} />
         </div>
       </div>
 
-      {/* View all */}
-      <FadeIn className="mt-16 flex justify-center">
-        <button className="group flex items-center gap-4 font-sans text-[11px] tracking-[0.3em] uppercase text-stone-500 hover:text-stone-900 transition-colors duration-300">
+      <FadeIn className="mt-12 flex justify-center">
+        <button className="group flex items-center gap-4 font-sans text-[11px] tracking-[0.3em] uppercase text-stone-500 hover:text-stone-900 transition-colors duration-300 py-3">
           Tüm Projeler
           <span className="w-8 h-[1px] bg-stone-400 group-hover:w-16 group-hover:bg-stone-900 transition-all duration-500" />
         </button>

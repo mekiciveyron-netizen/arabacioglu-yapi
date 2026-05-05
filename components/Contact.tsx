@@ -5,12 +5,7 @@ import FadeIn from "./FadeIn";
 
 export default function Contact() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -21,25 +16,21 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
-    // Simulate async send
     await new Promise((r) => setTimeout(r, 1400));
     setStatus("sent");
   };
 
   return (
-    <section id="iletisim" className="py-32 md:py-40 px-6 md:px-12">
+    <section id="iletisim" className="py-16 md:py-40 px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-32">
           {/* Left: info */}
           <div>
             <FadeIn>
-              <span className="block font-sans text-[11px] tracking-[0.4em] uppercase text-stone-400 mb-6">
+              <span className="block font-sans text-[11px] tracking-[0.4em] uppercase text-stone-400 mb-5">
                 İletişim
               </span>
-              <h2
-                className="font-serif font-light text-stone-900 leading-tight"
-                style={{ fontSize: "clamp(2.2rem, 4vw, 3.5rem)" }}
-              >
+              <h2 className="font-serif font-light text-stone-900 leading-tight text-3xl sm:text-4xl md:text-5xl">
                 Projenizi
                 <br />
                 Hayata
@@ -48,12 +39,12 @@ export default function Contact() {
               </h2>
             </FadeIn>
 
-            <FadeIn delay={0.15} className="mt-12 space-y-8">
+            <FadeIn delay={0.15} className="mt-8 md:mt-12 space-y-6 md:space-y-8">
               <div>
                 <span className="block font-sans text-[10px] tracking-[0.3em] uppercase text-stone-400 mb-2">
                   Adres
                 </span>
-                <p className="font-sans text-[14px] text-stone-600 font-light leading-relaxed">
+                <p className="font-sans text-[13px] md:text-[14px] text-stone-600 font-light leading-relaxed">
                   Nispetiye Caddesi No: 12<br />
                   Beşiktaş, İstanbul
                 </p>
@@ -64,7 +55,7 @@ export default function Contact() {
                 </span>
                 <a
                   href="tel:+902121234567"
-                  className="font-sans text-[14px] text-stone-600 font-light hover:text-stone-900 transition-colors"
+                  className="font-sans text-[13px] md:text-[14px] text-stone-600 font-light hover:text-stone-900 transition-colors"
                 >
                   +90 212 123 45 67
                 </a>
@@ -75,7 +66,7 @@ export default function Contact() {
                 </span>
                 <a
                   href="mailto:info@arabaciogluyapi.com"
-                  className="font-sans text-[14px] text-stone-600 font-light hover:text-stone-900 transition-colors"
+                  className="font-sans text-[13px] md:text-[14px] text-stone-600 font-light hover:text-stone-900 transition-colors break-all"
                 >
                   info@arabaciogluyapi.com
                 </a>
@@ -86,7 +77,7 @@ export default function Contact() {
           {/* Right: form */}
           <FadeIn delay={0.2} direction="left">
             {status === "sent" ? (
-              <div className="flex flex-col items-start justify-center h-full py-16">
+              <div className="flex flex-col items-start justify-center py-12 md:py-16">
                 <div className="w-12 h-[1px] bg-stone-900 mb-8" />
                 <h3 className="font-serif text-3xl font-light text-stone-900 mb-4">
                   Teşekkürler.
@@ -96,9 +87,10 @@ export default function Contact() {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-8">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                  <div className="group">
+              <form onSubmit={handleSubmit} className="space-y-7 md:space-y-8">
+                {/* Name + Phone row — stacks to single col on xs */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-7 md:gap-8">
+                  <div>
                     <label className="block font-sans text-[10px] tracking-[0.3em] uppercase text-stone-400 mb-3">
                       Ad Soyad <span className="text-stone-300">*</span>
                     </label>
@@ -151,23 +143,23 @@ export default function Contact() {
                     value={form.message}
                     onChange={handleChange}
                     required
-                    rows={5}
+                    rows={4}
                     className="w-full bg-transparent border-b border-stone-200 pb-3 font-sans text-[14px] text-stone-900 placeholder-stone-300 outline-none focus:border-stone-900 transition-colors duration-300 resize-none"
                     placeholder="Projenizi kısaca anlatın..."
                   />
                 </div>
 
-                <div className="pt-4">
+                <div className="pt-2">
                   <button
                     type="submit"
                     disabled={status === "sending"}
-                    className="group relative overflow-hidden bg-stone-900 text-white font-sans text-[11px] tracking-[0.3em] uppercase px-12 py-5 hover:bg-stone-800 transition-colors duration-500 disabled:opacity-50"
+                    className="w-full sm:w-auto bg-stone-900 text-white font-sans text-[11px] tracking-[0.3em] uppercase px-10 py-4 hover:bg-stone-700 transition-colors duration-500 disabled:opacity-50 min-h-[52px] flex items-center justify-center gap-3"
                   >
                     {status === "sending" ? (
-                      <span className="flex items-center gap-3">
+                      <>
                         <span className="w-3 h-3 rounded-full border border-white/40 border-t-white animate-spin" />
                         Gönderiliyor...
-                      </span>
+                      </>
                     ) : (
                       "Gönder"
                     )}
