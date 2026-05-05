@@ -178,6 +178,27 @@ export default function Contact() {
           </div>
 
         </div>
+
+        {/* ── Google Maps ── */}
+        <FadeIn delay={0.1} className="mt-16 md:mt-24">
+          <span className="block font-sans text-[10px] tracking-[0.3em] uppercase text-stone-400 mb-4">
+            Konum
+          </span>
+          <div className="relative w-full overflow-hidden" style={{ height: "400px" }}>
+            <iframe
+              title="Arabacioglu Yapı Konum"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.3!2d29.0339!3d41.0762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab7b4c9e16f0f%3A0xe8e1d78c0f9a75b6!2sNispetiye%20Cd.%2C%20Be%C5%9Fikta%C5%9F%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1683000000000!5m2!1str!2str"
+              width="100%"
+              height="400"
+              style={{ border: 0, filter: "grayscale(1) contrast(1.05)" }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="absolute inset-0 w-full h-full"
+            />
+          </div>
+        </FadeIn>
+
       </div>
     </section>
   );
