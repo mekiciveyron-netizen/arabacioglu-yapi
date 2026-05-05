@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 
@@ -22,6 +22,12 @@ export const metadata: Metadata = {
   keywords: "mimarlık, inşaat, proje, yapı, arabacioglu",
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -29,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr" className={`${cormorant.variable} ${inter.variable}`}>
-      <body className="min-h-screen bg-stone-50">{children}</body>
+      <body className="min-h-screen bg-stone-50 overflow-x-hidden">{children}</body>
     </html>
   );
 }
