@@ -23,7 +23,6 @@ export default function Navbar() {
   const links = [
     { label: "Projeler", href: "#projeler" },
     { label: "Hakkımızda", href: "#hakkimizda" },
-    { label: "İletişim", href: "#iletisim" },
   ];
 
   return (

@@ -9,25 +9,21 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="WhatsApp ile iletişime geç"
-      className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full shadow-lg shadow-black/20"
-      style={{ backgroundColor: "#25D366" }}
+      className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-zinc-900 border border-[#C9A96E]/40 shadow-lg shadow-black/40"
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ delay: 2, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-      whileHover={{ scale: 1.1 }}
+      whileHover={{ scale: 1.08, borderColor: "rgba(201,169,110,0.8)" }}
       whileTap={{ scale: 0.95 }}
     >
-      {/* Pulse ring */}
-      <span
-        className="absolute inset-0 rounded-full animate-ping opacity-30"
-        style={{ backgroundColor: "#25D366" }}
-      />
+      {/* Subtle gold pulse */}
+      <span className="absolute inset-0 rounded-full animate-ping opacity-10 bg-[#C9A96E]" />
 
       {/* WhatsApp SVG icon */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        fill="white"
+        fill="#C9A96E"
         className="w-7 h-7 relative z-10"
         aria-hidden="true"
       >
