@@ -41,7 +41,7 @@ const projects = [
     year: "2022",
     location: "Efeler / Aydın",
     photo: "https://arabaciogluyapi.com/img/latest-project-5.png",
-    alt: "La Perla Presidential çatı dairesi iç mekan",
+    alt: "La Perla Presidential çatı dairesi",
     tall: false,
   },
   {
@@ -66,37 +66,37 @@ function ProjectCard({
   return (
     <FadeIn delay={delay}>
       <div className="group cursor-pointer">
-        {/* Image container — fixed height on mobile, taller on desktop */}
         <div
           className={`relative w-full overflow-hidden ${
-            project.tall
-              ? "h-64 sm:h-80 md:h-[480px]"
-              : "h-56 sm:h-72 md:h-[340px]"
+            project.tall ? "h-64 sm:h-80 md:h-[500px]" : "h-56 sm:h-72 md:h-[360px]"
           }`}
         >
           <Image
             src={project.photo}
             alt={project.alt}
             fill
-            className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+            className="object-cover object-center transition-transform duration-1000 ease-out group-hover:scale-105"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 40vw"
           />
-          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" />
-          <span className="absolute top-4 left-4 font-sans text-[10px] tracking-[0.3em] text-white/60 bg-black/25 px-2 py-1">
+          {/* Dark overlay always present, lighter on hover */}
+          <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-700" />
+          {/* Gold accent bottom line on hover */}
+          <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#C9A96E] scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
+          <span className="absolute top-4 left-4 font-sans text-[10px] tracking-[0.3em] text-[#C9A96E] bg-black/40 px-2.5 py-1 font-bold">
             {project.id}
           </span>
         </div>
 
-        <div className="pt-4 pb-2 flex items-start justify-between gap-2">
+        <div className="pt-5 pb-2 flex items-start justify-between gap-2 border-b border-zinc-900">
           <div>
-            <h3 className="font-serif text-lg md:text-xl font-semibold text-stone-900 leading-snug">
+            <h3 className="font-serif text-base md:text-lg font-bold text-white leading-snug tracking-wide">
               {project.title}
             </h3>
-            <span className="font-sans text-[10px] tracking-[0.2em] text-stone-400 uppercase mt-1 block">
+            <span className="font-sans text-[10px] tracking-[0.25em] text-zinc-600 uppercase mt-1.5 block font-medium">
               {project.category} · {project.location}
             </span>
           </div>
-          <span className="font-sans text-[11px] text-stone-400 mt-1 shrink-0">
+          <span className="font-sans text-[11px] text-zinc-700 mt-1 shrink-0 font-medium">
             {project.year}
           </span>
         </div>
@@ -107,53 +107,45 @@ function ProjectCard({
 
 export default function Projects() {
   return (
-    <section id="projeler" className="py-14 md:py-40 px-4 md:px-12">
+    <section id="projeler" className="py-24 md:py-44 px-4 md:px-12 bg-zinc-950">
       <div className="max-w-7xl mx-auto">
+
         {/* Section header */}
-        <div className="flex flex-col gap-3 mb-10 md:flex-row md:items-end md:justify-between md:mb-20">
+        <div className="flex flex-col gap-4 mb-14 md:flex-row md:items-end md:justify-between md:mb-24">
           <FadeIn>
-            <span className="block font-sans text-[11px] tracking-[0.4em] uppercase text-stone-400 mb-3">
+            <span className="block font-sans text-xs tracking-[0.5em] uppercase text-[#C9A96E] mb-4 font-semibold">
               Seçili Çalışmalar
             </span>
-            <h2 className="font-serif font-bold text-stone-900 text-3xl md:text-5xl lg:text-6xl leading-tight">
+            <h2 className="font-serif font-bold text-white text-3xl md:text-5xl lg:text-6xl leading-tight tracking-wide">
               Projeler
             </h2>
           </FadeIn>
-          <FadeIn delay={0.1}>
-            <p className="font-sans text-[13px] leading-relaxed text-stone-500 max-w-xs font-light">
+          <FadeIn delay={0.15}>
+            <p className="font-sans text-sm leading-relaxed text-zinc-500 max-w-xs font-medium">
               Her proje, mekânın ruhunu keşfetme ve özgün bir dil oluşturma sürecidir.
             </p>
           </FadeIn>
         </div>
 
-        {/*
-          Mobile  → single column, all cards full width
-          md      → asymmetric two-column grid
-          No col-start / negative offsets that could bleed on mobile
-        */}
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
-          {/* Left col: project 1 full height + project 4 below */}
-          <div className="flex flex-col gap-6 md:gap-8">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-10">
+          <div className="flex flex-col gap-6 md:gap-10">
             <ProjectCard project={projects[0]} delay={0} />
             <ProjectCard project={projects[3]} delay={0.1} />
           </div>
-
-          {/* Right col: offset down on md, project 2 + 3 stacked */}
-          <div className="flex flex-col gap-6 md:gap-8 md:mt-20">
-            <ProjectCard project={projects[1]} delay={0.05} />
-            <ProjectCard project={projects[2]} delay={0.15} />
+          <div className="flex flex-col gap-6 md:gap-10 md:mt-24">
+            <ProjectCard project={projects[1]} delay={0.08} />
+            <ProjectCard project={projects[2]} delay={0.16} />
           </div>
         </div>
 
-        {/* Full-width 5th project */}
-        <div className="mt-6 md:mt-8">
+        <div className="mt-6 md:mt-10">
           <ProjectCard project={projects[4]} delay={0} />
         </div>
 
-        <FadeIn className="mt-12 flex justify-center">
-          <button className="group flex items-center gap-4 font-sans font-semibold text-[11px] tracking-[0.3em] uppercase text-stone-500 hover:text-stone-900 transition-colors duration-300 py-3 min-h-[44px]">
+        <FadeIn className="mt-16 flex justify-center">
+          <button className="group flex items-center gap-5 font-sans font-bold text-sm tracking-[0.3em] uppercase text-zinc-600 hover:text-[#C9A96E] transition-colors duration-500 py-3 min-h-[44px]">
             Tüm Projeler
-            <span className="w-8 h-[1px] bg-stone-400 group-hover:w-14 group-hover:bg-stone-900 transition-all duration-500" />
+            <span className="w-8 h-[1px] bg-current group-hover:w-14 transition-all duration-500" />
           </button>
         </FadeIn>
       </div>

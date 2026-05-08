@@ -1,12 +1,11 @@
 import type { Metadata, Viewport } from "next";
-import { Playfair_Display, Syne } from "next/font/google";
+import { Cinzel, Syne } from "next/font/google";
 import "./globals.css";
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const cinzel = Cinzel({
+  variable: "--font-cinzel",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800", "900"],
-  style: ["normal", "italic"],
 });
 
 const syne = Syne({
@@ -30,12 +29,10 @@ export const viewport: Viewport = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="tr" className={`${playfair.variable} ${syne.variable}`}>
-      <body className="min-h-screen bg-stone-50 overflow-x-hidden">{children}</body>
+    <html lang="tr" className={`${cinzel.variable} ${syne.variable}`}>
+      <body className="min-h-screen bg-black overflow-x-hidden">{children}</body>
     </html>
   );
 }
