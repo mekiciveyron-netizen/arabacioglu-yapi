@@ -48,3 +48,24 @@ body {
   background: #C9A96E;
   color: #000000;
 }
+
+/* Investment Simulator — range slider */
+.sim-slider { appearance: none; }
+.sim-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: #C9A96E;
+  cursor: pointer;
+  box-shadow: 0 0 0 3px rgba(201,169,110,0.2), 0 2px 8px rgba(0,0,0,0.5);
+  transition: box-shadow 0.25s;
+}
+.sim-slider::-webkit-slider-thumb:hover { box-shadow: 0 0 0 6px rgba(201,169,110,0.25), 0 2px 12px rgba(0,0,0,0.6); }
+.sim-slider::-moz-range-thumb {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: #C9A96E;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 0 3px rgba(201,169,110,0.2);
+}
